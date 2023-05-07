@@ -6,41 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url("css/main.css") ?>">
-    <title>Nasi Goreng</title>
+    <title>Nasi Goreng 3 Saudara</title>
 </head>
 
 <body class="bg-zinc-100">
     <main class="max-w-4xl w-full mx-auto bg-white">
-        <header class="flex items-center justify-between bg-zinc-950 py-3 px-8 rounded shadow">
+        <header class="flex items-center justify-between bg-sky-500	 py-3 px-8 rounded shadow">
             <a href="<?= base_url() ?>">
-                <h1 class="font-bold text-2xl text-emerald-400">Nasgor</h1>
+                <h1 class="font-bold text-2xl text-white">Nasi Goreng 3 Saudara</h1>
             </a>
             <div class="flex items-center gap-x-3">
                 <!-- shopping cart -->
                 <a href="<?= base_url("detail") ?>" class="relative cursor-pointer p-2 rounded-full hover:bg-zinc-900">
-                    <span
-                        class="absolute text-white bg-rose-500 rounded-full w-4 h-4 right-0 top-0 flex items-center justify-center text-xs <?= $keranjang == 0 ? 'hidden' : '' ?>"><?= $keranjang ?></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="w-5 h-5 text-white">
-                        <path
-                            d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                    <span class="absolute text-white bg-rose-500 rounded-full w-4 h-4 right-0 top-0 flex items-center justify-center text-xs <?= $keranjang == 0 ? 'hidden' : '' ?>"><?= $keranjang ?></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white">
+                        <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
                     </svg>
                 </a>
-
+                <a href="<?= base_url("login") ?>" class="font-medium w-64 p-3 py-1 bg-white hover:bg-zinc-900 text-black rounded-full shadow-md text-center">Masuk</a>
             </div>
         </header>
-        <?php if (session()->getFlashdata("error")): ?>
+        <?php if (session()->getFlashdata("error")) : ?>
             <div class="flex-1 px-3 py-2 bg-rose-300 text-rose-800 m-3 rounded">
                 Gagal Menambahkan ke keranjang
             </div>
         <?php endif; ?>
         <div class="grid grid-cols-3 justify-center gap-3 w-full p-3">
             <!-- card -->
-            <?php foreach ($menus as $key => $menu): ?>
+            <?php foreach ($menus as $key => $menu) : ?>
                 <div class="flex-1 rounded shadow overflow-clip">
                     <div class="w-full h-52 overflow-hidden flex-1 justify-center">
-                        <img src="<?= base_url("uploads/" . $menu["gambar"]) ?>" alt="" srcset=""
-                            class="h-full w-full object-contain">
+                        <img src="<?= base_url("uploads/" . $menu["gambar"]) ?>" alt="" srcset="" class="h-full w-full object-contain">
                     </div>
                     <div class="px-3 py-2">
                         <h3 class="font-semibold text-lg capitalize">
@@ -56,14 +52,11 @@
                                     <!-- Minus -->
                                     <input type="button" class="p-2 bg-zinc-100 cursor-pointer minus" value="-">
                                     <!-- count -->
-                                    <input type="number" name="jumlah" pattern="0-9"
-                                        class="count flex-1 max-w-[36px] h-full text-center focus:outline-transparent"
-                                        tabindex="-1" inputmode="numeric" value="1">
+                                    <input type="number" name="jumlah" pattern="0-9" class="count flex-1 max-w-[36px] h-full text-center focus:outline-transparent" tabindex="-1" inputmode="numeric" value="1">
                                     <!-- plus -->
                                     <input type="button" class="p-2 bg-zinc-100 cursor-pointer plus" value="+">
                                 </div>
-                                <button type="submit"
-                                    class="px-3 py-2 bg-rose-500 text-white text-sm uppercase rounded">Tambah</button>
+                                <button type="submit" class="px-3 py-2 bg-sky-700 hover:bg-sky-500 text-white text-sm uppercase rounded">Tambah</button>
                             </div>
                         </form>
                     </div>

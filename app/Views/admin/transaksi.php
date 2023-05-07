@@ -13,14 +13,7 @@
     <div class="flex h-screen overflow-hidden">
         <?= view("components/sidebar", ["active" => "transaksi"]) ?>
         <div class="flex-1 h-screen overscroll-y-auto p-3">
-            <header class="sticky top-0 z-50 w-full shadow-md rounded-md transition-all flex-1 h-32 overflow-clip"
-                id="indexHeader"
-                style="background-image: url('<?= base_url("image/bg.jpg") ?>'); background-size: cover; background-position: top;">
-                <div class="grid grid-cols-2 items-center gap-y-3 h-full py-3 px-6 bg-slate-900 bg-opacity-25">
-                    <h1 class="text-2xl font-bold text-slate-50">
-                        Transaksi
-                    </h1>
-                </div>
+            <header class="sticky top-0 z-50 w-full shadow-md rounded-md transition-all flex-1 h-32 overflow-clip" id="indexHeader" style="background-image: url('<?= base_url("image/bg.jpeg") ?>'); background-size: cover; background-position: top;">
             </header>
             <div class="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200 m-3">
                 <!-- table -->
@@ -54,7 +47,7 @@
 
                         <tbody class="text-sm divide-y divide-gray-100">
                             <!-- record 1 -->
-                            <?php foreach ($transaksi as $key => $item): ?>
+                            <?php foreach ($transaksi as $key => $item) : ?>
                                 <tr>
                                     <td class="p-2">
                                         <div class="text-gray-800">

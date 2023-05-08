@@ -635,7 +635,7 @@ input[type=number] {
 }
 
 .border {
-    border-width: 1px
+    border-width: 2px;
 }
 
 .border-b-2 {
@@ -1039,8 +1039,6 @@ input[type=number] {
 }
 .hover\:bg-sky-500:hover{
     background-color: rgb(14 165 233/var(--tw-bg-opacity));
-
-
 }
 
 .hover\:bg-slate-100:hover {
@@ -1117,5 +1115,14 @@ input[type=number] {
 }
 .bg-slate-800	{
     background-color: rgb(30 41 59);
-
+}
+.rounded-tr-lg	{
+    border-top-right-radius: 0.5rem; /* 8px */
+}
+.bg-red-600	{
+    background-color: rgb(220 38 38);
+}
+.hover\:bg-red-700:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(185 28 28);
 }
